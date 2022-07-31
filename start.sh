@@ -5,12 +5,6 @@ cd "$SCRIPT_DIR" || { echo "Failed to cd to ${SCRIPT_DIR}"; exit 1; }
 
 DENO_PATH="${DENO_PATH:-$(which deno)}"
 
-# STORAGE_DIR="./data"
-# if [[ ! -d "./data" ]]; then
-#     echo "Creating storage directory..."
-#     mkdir -v "$STORAGE_DIR" || exit 1
-# fi
-
 ENV="$(grep 'ENV' .env | grep -v '^#' | cut -d '=' -f2)"
 ENV="${ENV:-prod}"
 
