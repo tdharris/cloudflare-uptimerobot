@@ -21,4 +21,4 @@ fi
     --allow-env \
     --allow-read \
     "${extra_args[@]}" \
-    main.ts
+    src/main.ts
