@@ -133,7 +133,7 @@ export class Cloudflare {
     while (cursorExists) {
       const r = await this.get(
         "/accounts/" + this.accountId + "/rules/lists/" + listId + "/items" +
-        (cursor ? "?cursor=" + cursor : ""),
+          (cursor ? "?cursor=" + cursor : ""),
       );
       if (!r.success) {
         console.error(r);
@@ -182,7 +182,7 @@ export class Cloudflare {
   public async getBulkOperationStatus(operationId: string) {
     const r = await this.get(
       "/accounts/" + this.accountId + "/rules/lists/bulk_operations/" +
-      operationId,
+        operationId,
     );
     if (!r.success) {
       console.error(r);
@@ -198,7 +198,7 @@ export class Cloudflare {
   ): Promise<any> {
     const r = await this.get(
       "/accounts/" + this.accountId + "/rules/lists/bulk_operations/" +
-      operationId,
+        operationId,
     );
     if (!r.success) {
       console.error(r);
@@ -254,7 +254,7 @@ export class Cloudflare {
   public async getFirewallRules(description: string) {
     const r = await this.get(
       "/zones/" + this.zoneId + "/firewall/rules?action=allow&description=" +
-      description,
+        description,
     );
     if (!r.success) {
       console.error(r);
