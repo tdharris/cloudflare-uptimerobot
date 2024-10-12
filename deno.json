@@ -1,0 +1,10 @@
+{
+    "tasks": {
+        "dev": "deno run --allow-net --allow-env --allow-read --watch src/main.ts",
+        "start": "deno run --allow-net --allow-env --allow-read src/main.ts"
+    },
+    "imports": {
+        "dotenv/": "https://deno.land/x/dotenv@v3.2.0/",
+        "lodash": "npm:lodash@^4.17.21"
+    }
+}
